@@ -3,74 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nova – Your AI Assistant</title>
+<title>Nova – AI Assistant of the Galaxy</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 <style>
   body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    color: #333;
+    font-family: 'Orbitron', sans-serif;
+    color: #fdfdfd;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow-x: hidden;
   }
   header {
-    background-color: #1e1e2f;
-    color: #fff;
-    padding: 20px 0;
+    background: transparent;
+    padding: 20px;
     text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
   }
   nav a {
-    margin: 0 15px;
-    color: #fff;
+    margin: 0 20px;
+    color: #fdfdfd;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  nav a:hover {
+    color: #8ab4f8;
   }
   .hero {
-    padding: 60px 20px;
-    background: linear-gradient(90deg, #2e3a64, #4b77be);
-    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 0 20px;
+    background: radial-gradient(circle at center, rgba(138,180,248,0.2) 0%, rgba(9,10,15,0.8) 100%);
+    position: relative;
   }
   .hero h1 {
+    font-size: 3rem;
     margin-bottom: 20px;
-    font-size: 2.5rem;
   }
   .hero p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+  .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid #8ab4f8;
+    color: #8ab4f8;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background 0.3s, color 0.3s;
+  }
+  .btn:hover {
+    background: #8ab4f8;
+    color: #090a0f;
   }
   .features {
-    padding: 40px 20px;
-    max-width: 1000px;
+    padding: 80px 20px;
+    max-width: 1200px;
     margin: 0 auto;
   }
   .features h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
   }
   .feature-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
   }
   .feature {
-    flex: 1 1 280px;
+    flex: 1 1 300px;
+    background: rgba(255, 255, 255, 0.05);
     margin: 15px;
-    padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
   }
   .feature h3 {
     margin-top: 0;
+    margin-bottom: 10px;
+    color: #8ab4f8;
   }
   footer {
-    background-color: #1e1e2f;
-    color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
+    background: transparent;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  footer a {
+    color: #8ab4f8;
+    text-decoration: none;
   }
 </style>
 </head>
 <body>
-
 <header>
   <nav>
     <a href="#home">Home</a>
@@ -80,32 +115,32 @@
 </header>
 
 <section class="hero" id="home">
-  <h1>Welcome to Nova</h1>
-  <p>Your intelligent AI assistant designed to make life easier—ask questions, get answers, and automate tasks effortlessly.</p>
+  <h1>Explore the Universe of AI with Nova</h1>
+  <p>Nova is your cosmic companion—leveraging artificial intelligence to illuminate your path through the galaxy of information and productivity.</p>
+  <a href="#features" class="btn">Discover Features</a>
 </section>
 
 <section class="features" id="features">
-  <h2>Key Features</h2>
+  <h2>Stellar Features</h2>
   <div class="feature-grid">
     <div class="feature">
-      <h3>Instant Answers</h3>
-      <p>Nova responds to your questions in real time, helping you find information quickly and accurately.</p>
+      <h3>Instant Knowledge</h3>
+      <p>Get cosmic insights instantly with answers from across the universe of knowledge.</p>
     </div>
     <div class="feature">
-      <h3>Task Automation</h3>
-      <p>Automate everyday tasks such as scheduling, reminders, and simple communications with ease.</p>
+      <h3>Automation Nebula</h3>
+      <p>Simplify your orbit—let Nova automate tasks like scheduling, reminders and communications.</p>
     </div>
     <div class="feature">
-      <h3>Customizable</h3>
-      <p>Tailor Nova’s functionality to your personal or business needs with flexible settings.</p>
+      <h3>Personalized Galaxy</h3>
+      <p>Customize Nova to suit your needs and chart your own constellation of tools.</p>
     </div>
   </div>
 </section>
 
 <footer id="contact">
-  <p>Contact us at <a href="mailto:info@novaai.com" style="color:#8ab4f8;">info@novaai.com</a></p>
+  <p>Reach out at <a href="mailto:info@novaai.com">info@novaai.com</a></p>
   <p>&copy; 2025 Nova. All rights reserved.</p>
 </footer>
-
 </body>
 </html>
