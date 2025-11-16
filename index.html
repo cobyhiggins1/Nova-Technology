@@ -1,146 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nova – AI Assistant of the Galaxy</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Orbitron', sans-serif;
-    color: #fdfdfd;
-    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    overflow-x: hidden;
-  }
-  header {
-    background: transparent;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-  }
-  nav a {
-    margin: 0 20px;
-    color: #fdfdfd;
-    text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
-  }
-  nav a:hover {
-    color: #8ab4f8;
-  }
-  .hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-    background: radial-gradient(circle at center, rgba(138,180,248,0.2) 0%, rgba(9,10,15,0.8) 100%);
-    position: relative;
-  }
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  .hero p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: 0 auto 30px;
-  }
-  .btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border: 2px solid #8ab4f8;
-    color: #8ab4f8;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: background 0.3s, color 0.3s;
-  }
-  .btn:hover {
-    background: #8ab4f8;
-    color: #090a0f;
-  }
-  .features {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .features h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-  }
-  .feature-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .feature {
-    flex: 1 1 300px;
-    background: rgba(255, 255, 255, 0.05);
-    margin: 15px;
-    padding: 30px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-  }
-  .feature h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
-    color: #8ab4f8;
-  }
-  footer {
-    text-align: center;
-    padding: 20px;
-    background: transparent;
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-  footer a {
-    color: #8ab4f8;
-    text-decoration: none;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova – AI Assistant of the Galaxy</title>
+  <!-- Orbitron font for a futuristic look -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      color: #fdfdfd;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      overflow-x: hidden;
+    }
+    header {
+      background: transparent;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+    }
+    nav a {
+      margin: 0 20px;
+      color: #fdfdfd;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 120px 20px 80px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #4b77be;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .features {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .features h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .feature {
+      flex: 1 1 280px;
+      margin: 15px;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+    }
+    .feature h3 {
+      margin-top: 0;
+      color: #8ab4f8;
+    }
+    /* Chat section */
+    .chat-section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .chat-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .chat-box {
+      height: 400px;
+      overflow-y: auto;
+      background-color: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+    .chat-message {
+      margin-bottom: 10px;
+    }
+    .chat-message.user {
+      text-align: right;
+    }
+    .chat-input-container {
+      display: flex;
+    }
+    .chat-input-container input {
+      flex: 1;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      margin-right: 10px;
+    }
+    .chat-input-container button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      background-color: #4b77be;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background-color: transparent;
+      text-align: center;
+      padding: 40px 20px;
+    }
+  </style>
 </head>
 <body>
+
 <header>
   <nav>
     <a href="#home">Home</a>
     <a href="#features">Features</a>
+    <a href="#chat">Chat</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero" id="home">
   <h1>Explore the Universe of AI with Nova</h1>
-  <p>Nova is your cosmic companion—leveraging artificial intelligence to illuminate your path through the galaxy of information and productivity.</p>
+  <p>Nova is your intelligent AI assistant, here to answer questions, automate tasks and guide you through the cosmos of possibilities.</p>
   <a href="#features" class="btn">Discover Features</a>
 </section>
 
 <section class="features" id="features">
-  <h2>Stellar Features</h2>
+  <h2>Key Features</h2>
   <div class="feature-grid">
     <div class="feature">
-      <h3>Instant Knowledge</h3>
-      <p>Get cosmic insights instantly with answers from across the universe of knowledge.</p>
+      <h3>Instant Answers</h3>
+      <p>Ask Nova anything—from homework to how‑tos—and receive clear, immediate responses.</p>
     </div>
     <div class="feature">
-      <h3>Automation Nebula</h3>
-      <p>Simplify your orbit—let Nova automate tasks like scheduling, reminders and communications.</p>
+      <h3>Task Automation</h3>
+      <p>Let Nova handle scheduling, reminders and simple communications seamlessly.</p>
     </div>
     <div class="feature">
-      <h3>Personalized Galaxy</h3>
-      <p>Customize Nova to suit your needs and chart your own constellation of tools.</p>
+      <h3>Customizable Assistant</h3>
+      <p>Adjust Nova’s capabilities to suit your personal or business needs.</p>
     </div>
   </div>
 </section>
 
+<section class="chat-section" id="chat">
+  <h2>Chat with Nova</h2>
+  <div class="chat-box" id="chatBox">
+    <!-- Messages will appear here -->
+  </div>
+  <div class="chat-input-container">
+    <input type="text" id="userInput" placeholder="Type your message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</section>
+
 <footer id="contact">
-  <p>Reach out at <a href="mailto:info@novaai.com">info@novaai.com</a></p>
+  <p>Contact us at <a href="mailto:info@novaai.com" style="color:#8ab4f8;">info@novaai.com</a></p>
   <p>&copy; 2025 Nova. All rights reserved.</p>
 </footer>
+
+<script>
+  // Function to append a message to the chat box
+  function appendMessage(text, sender) {
+    const chatBox = document.getElementById('chatBox');
+    const messageDiv = document.createElement('div');
+    messageDiv.className = 'chat-message ' + sender;
+    messageDiv.textContent = text;
+    chatBox.appendChild(messageDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  // Function to send a message
+  async function sendMessage() {
+    const input = document.getElementById('userInput');
+    const message = input.value.trim();
+    if (!message) return;
+    appendMessage('You: ' + message, 'user');
+    input.value = '';
+    try {
+      // POST the message to your backend endpoint
+      const response = await fetch('YOUR_BACKEND_ENDPOINT', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ message })
+      });
+      if (response.ok) {
+        const data = await response.json();
+        appendMessage('Nova: ' + data.reply, 'bot');
+      } else {
+        appendMessage('Nova: Sorry, there was an error. Please try again later.', 'bot');
+      }
+    } catch (err) {
+      appendMessage('Nova: Unable to reach the server.', 'bot');
+    }
+  }
+</script>
+
 </body>
 </html>
