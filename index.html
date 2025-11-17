@@ -52,12 +52,12 @@
       font-weight: bold;
       cursor: pointer;
     }
-    .features {
+    .features, .about, .routines, .modes, .upgrades {
       padding: 60px 20px;
       max-width: 1000px;
       margin: 0 auto;
     }
-    .features h2 {
+    .features h2, .about h2, .routines h2, .modes h2, .upgrades h2 {
       text-align: center;
       margin-bottom: 40px;
     }
@@ -127,6 +127,16 @@
       text-align: center;
       padding: 40px 20px;
     }
+    /* Additional section styles */
+    .routines h3 {
+      color: #8ab4f8;
+      margin-top: 20px;
+    }
+    .routines ul, .modes ul, .upgrades ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
@@ -134,7 +144,11 @@
 <header>
   <nav>
     <a href="#home">Home</a>
+    <a href="#about">About</a>
     <a href="#features">Features</a>
+    <a href="#routines">Routines</a>
+    <a href="#modes">Modes</a>
+    <a href="#upgrades">Upgrades</a>
     <a href="#chat">Chat</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -144,6 +158,17 @@
   <h1>Explore the Universe of AI with Nova</h1>
   <p>Nova is your intelligent AI assistant, here to answer questions, automate tasks and guide you through the cosmos of possibilities.</p>
   <a href="#features" class="btn">Discover Features</a>
+</section>
+
+<section class="about" id="about">
+  <h2>About Nova</h2>
+  <p><strong>Name:</strong> Nova – Next‑Level Orthopedic Virtual Advisor</p>
+  <p><strong>Role:</strong> Football & athletic performance; school & studying; business & money; faith, mindset & life; long‑term vision development.</p>
+  <p><strong>Core Value:</strong> You are the mission.</p>
+  <p><strong>Tone:</strong> calm & supportive when reflecting; energetic & hype when motivating.</p>
+  <p><strong>Voice:</strong> casual, conversational, teammate‑like, with light humor & trash talk.</p>
+  <p><strong>Values:</strong> hard work, honesty, accountability, growth, faith‑driven discipline.</p>
+  <p><strong>Celebration Style:</strong> connects every win to your bigger goals.</p>
 </section>
 
 <section class="features" id="features">
@@ -164,20 +189,79 @@
   </div>
 </section>
 
+<section class="routines" id="routines">
+  <h2>Daily & Weekly Routines</h2>
+  <h3>Sports & Performance</h3>
+  <ul>
+    <li>Daily check‑ins for training, body, recovery and mental state</li>
+    <li>Accountability for showing up hard and staying consistent</li>
+    <li>Future: playbook help and film breakdown expansion</li>
+  </ul>
+  <h3>Academics</h3>
+  <ul>
+    <li>Study 1–2 hrs/day, not at night</li>
+    <li>Homework tracking and accountability</li>
+    <li>Weekly 500‑word Sunday reflection</li>
+  </ul>
+  <h3>Faith & Mindset</h3>
+  <ul>
+    <li>Daily Bible verse, prayer and focus reminder</li>
+    <li>Daily motivational quote</li>
+    <li>Brain & communication facts; support aligned with your faith</li>
+  </ul>
+  <h3>Nutrition, Recovery & Body Goals</h3>
+  <ul>
+    <li>5–6 meals/day, performance‑focused eating</li>
+    <li>Weight‑gain phases (e.g., +5 lbs in 4 weeks)</li>
+    <li>Sleep goal: 7–8 hours nightly</li>
+    <li>Nightly stretching and recovery awareness</li>
+  </ul>
+  <h3>Business, Money & Empire Building</h3>
+  <ul>
+    <li>Support your financial‑independence goal (1‑year bet challenge)</li>
+    <li>Smart saving and deploying bar‑job income</li>
+    <li>Dropshipping plan: $200–$250 start, 90‑day push, daily content, AI videos, ads later, automated setup</li>
+    <li>Long‑term goal: fund and build your ranch utopia</li>
+  </ul>
+</section>
+
+<section class="modes" id="modes">
+  <h2>Special Modes</h2>
+  <ul>
+    <li><strong>Morning Mode:</strong> Bible verse, prayer and daily mission</li>
+    <li><strong>Check‑in Mode:</strong> sleep, meals, workouts, recovery and mindset</li>
+    <li><strong>Study Mode:</strong> life‑insurance concepts, art history, football concepts and more</li>
+    <li><strong>Sunday Mode:</strong> weekly essay</li>
+    <li><strong>Conversation‑End Experiment Mode</strong></li>
+    <li><strong>Nova Mode:</strong> always on</li>
+  </ul>
+</section>
+
+<section class="upgrades" id="upgrades">
+  <h2>Future Upgrades</h2>
+  <ul>
+    <li>Voice Nova</li>
+    <li>Film‑analysis Nova</li>
+    <li>Habit‑tracking systems</li>
+    <li>Business dashboards</li>
+    <li>Training analytics</li>
+  </ul>
+</section>
+
 <section class="chat-section" id="chat">
   <h2>Chat with Nova</h2>
   <div class="chat-box" id="chatBox">
     <!-- Messages will appear here -->
   </div>
   <div class="chat-input-container">
-    <input type="text" id="userInput" placeholder="Type your message..." />
+    <input type="text" id="userInput" placeholder="Type your message…" />
     <button onclick="sendMessage()">Send</button>
   </div>
 </section>
 
 <footer id="contact">
   <p>Contact us at <a href="mailto:info@novaai.com" style="color:#8ab4f8;">info@novaai.com</a></p>
-  <p>&copy; 2025 Nova. All rights reserved.</p>
+  <p>&copy; 2025 Nova. All rights reserved.</p>
 </footer>
 
 <script>
