@@ -200,7 +200,7 @@
     input.value = '';
     try {
       // POST the message to your backend endpoint
-      const response = await fetch('YOUR_BACKEND_ENDPOINT', {
+      const response = await fetch('/.netlify/functions/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
