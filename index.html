@@ -3,20 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova – AI Assistant of the Galaxy</title>
-  <!-- Orbitron font for a futuristic look -->
+  <title>Brick-Wall Energy</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Orbitron', sans-serif;
-      color: #fdfdfd;
-      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-      overflow-x: hidden;
+      color: #ffffff;
+      background-color: #0a0a0a;
     }
     header {
-      background: transparent;
+      background: rgba(0,0,0,0.7);
       padding: 20px;
       text-align: center;
       position: fixed;
@@ -24,118 +22,49 @@
       z-index: 10;
     }
     nav a {
-      margin: 0 20px;
-      color: #fdfdfd;
+      margin: 0 15px;
+      color: #ffffff;
       text-decoration: none;
       font-weight: bold;
     }
     .hero {
-      padding: 120px 20px 80px;
+      padding: 160px 20px 80px;
       text-align: center;
+      background-image: url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
     }
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 20px;
+      color: #ff4500;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       max-width: 700px;
       margin: 0 auto 30px;
     }
     .btn {
       display: inline-block;
-      padding: 12px 24px;
-      background-color: #4b77be;
+      padding: 12px 28px;
+      background-color: #ff4500;
       color: #fff;
       text-decoration: none;
       border-radius: 6px;
       font-weight: bold;
-      cursor: pointer;
     }
-    .features, .about, .routines, .modes, .upgrades {
-      padding: 60px 20px;
-      max-width: 1000px;
+    .section {
+      padding: 80px 20px;
+      max-width: 900px;
       margin: 0 auto;
     }
-    .features h2, .about h2, .routines h2, .modes h2, .upgrades h2 {
+    .section h2 {
       text-align: center;
-      margin-bottom: 40px;
-    }
-    .feature-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-    .feature {
-      flex: 1 1 280px;
-      margin: 15px;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
-      backdrop-filter: blur(4px);
-    }
-    .feature h3 {
-      margin-top: 0;
-      color: #8ab4f8;
-    }
-    /* Chat section */
-    .chat-section {
-      padding: 60px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .chat-section h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .chat-box {
-      height: 400px;
-      overflow-y: auto;
-      background-color: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 8px;
-      padding: 15px;
-      margin-bottom: 15px;
-    }
-    .chat-message {
-      margin-bottom: 10px;
-    }
-    .chat-message.user {
-      text-align: right;
-    }
-    .chat-input-container {
-      display: flex;
-    }
-    .chat-input-container input {
-      flex: 1;
-      padding: 10px;
-      border-radius: 6px;
-      border: none;
-      margin-right: 10px;
-    }
-    .chat-input-container button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 6px;
-      background-color: #4b77be;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
+      margin-bottom: 30px;
     }
     footer {
-      background-color: transparent;
       text-align: center;
       padding: 40px 20px;
-    }
-    /* Additional section styles */
-    .routines h3 {
-      color: #8ab4f8;
-      margin-top: 20px;
-    }
-    .routines ul, .modes ul, .upgrades ul {
-      list-style-type: disc;
-      padding-left: 20px;
-      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -144,164 +73,35 @@
 <header>
   <nav>
     <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#features">Features</a>
-    <a href="#routines">Routines</a>
-    <a href="#modes">Modes</a>
-    <a href="#upgrades">Upgrades</a>
-    <a href="#chat">Chat</a>
+    <a href="#story">Story</a>
+    <a href="#journey">Journey</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <section class="hero" id="home">
-  <h1>Explore the Universe of AI with Nova</h1>
-  <p>Nova is your intelligent AI assistant, here to answer questions, automate tasks and guide you through the cosmos of possibilities.</p>
-  <a href="#features" class="btn">Discover Features</a>
+  <h1>Built from Nothing. Chasing Everything.</h1>
+  <p>I'm a ranch kid from Nebraska chasing a professional athletic dream. Follow my rise and get motivated to run through a brick wall.</p>
+  <a href="#story" class="btn">My Story</a>
 </section>
 
-<section class="about" id="about">
-  <h2>About Nova</h2>
-  <p><strong>Name:</strong> Nova – Next‑Level Orthopedic Virtual Advisor</p>
-  <p><strong>Role:</strong> Football & athletic performance; school & studying; business & money; faith, mindset & life; long‑term vision development.</p>
-  <p><strong>Core Value:</strong> You are the mission.</p>
-  <p><strong>Tone:</strong> calm & supportive when reflecting; energetic & hype when motivating.</p>
-  <p><strong>Voice:</strong> casual, conversational, teammate‑like, with light humor & trash talk.</p>
-  <p><strong>Values:</strong> hard work, honesty, accountability, growth, faith‑driven discipline.</p>
-  <p><strong>Celebration Style:</strong> connects every win to your bigger goals.</p>
+<section class="section" id="story">
+  <h2>My Story</h2>
+  <p>I grew up on a ranch in the middle of nowhere in Nebraska. Sports were my escape—football, baseball, track and wrestling. 
+  Baseball was my favorite, but I found success in football and track. After a season of college football, I pivoted and dedicated 
+  myself fully to track. Now I'm on a mission to become a professional athlete and prove that where you come from doesn't limit where you can go.</p>
 </section>
 
-<section class="features" id="features">
-  <h2>Key Features</h2>
-  <div class="feature-grid">
-    <div class="feature">
-      <h3>Instant Answers</h3>
-      <p>Ask Nova anything—from homework to how‑tos—and receive clear, immediate responses.</p>
-    </div>
-    <div class="feature">
-      <h3>Task Automation</h3>
-      <p>Let Nova handle scheduling, reminders and simple communications seamlessly.</p>
-    </div>
-    <div class="feature">
-      <h3>Customizable Assistant</h3>
-      <p>Adjust Nova’s capabilities to suit your personal or business needs.</p>
-    </div>
-  </div>
-</section>
-
-<section class="routines" id="routines">
-  <h2>Daily & Weekly Routines</h2>
-  <h3>Sports & Performance</h3>
-  <ul>
-    <li>Daily check‑ins for training, body, recovery and mental state</li>
-    <li>Accountability for showing up hard and staying consistent</li>
-    <li>Future: playbook help and film breakdown expansion</li>
-  </ul>
-  <h3>Academics</h3>
-  <ul>
-    <li>Study 1–2 hrs/day, not at night</li>
-    <li>Homework tracking and accountability</li>
-    <li>Weekly 500‑word Sunday reflection</li>
-  </ul>
-  <h3>Faith & Mindset</h3>
-  <ul>
-    <li>Daily Bible verse, prayer and focus reminder</li>
-    <li>Daily motivational quote</li>
-    <li>Brain & communication facts; support aligned with your faith</li>
-  </ul>
-  <h3>Nutrition, Recovery & Body Goals</h3>
-  <ul>
-    <li>5–6 meals/day, performance‑focused eating</li>
-    <li>Weight‑gain phases (e.g., +5 lbs in 4 weeks)</li>
-    <li>Sleep goal: 7–8 hours nightly</li>
-    <li>Nightly stretching and recovery awareness</li>
-  </ul>
-  <h3>Business, Money & Empire Building</h3>
-  <ul>
-    <li>Support your financial‑independence goal (1‑year bet challenge)</li>
-    <li>Smart saving and deploying bar‑job income</li>
-    <li>Dropshipping plan: $200–$250 start, 90‑day push, daily content, AI videos, ads later, automated setup</li>
-    <li>Long‑term goal: fund and build your ranch utopia</li>
-  </ul>
-</section>
-
-<section class="modes" id="modes">
-  <h2>Special Modes</h2>
-  <ul>
-    <li><strong>Morning Mode:</strong> Bible verse, prayer and daily mission</li>
-    <li><strong>Check‑in Mode:</strong> sleep, meals, workouts, recovery and mindset</li>
-    <li><strong>Study Mode:</strong> life‑insurance concepts, art history, football concepts and more</li>
-    <li><strong>Sunday Mode:</strong> weekly essay</li>
-    <li><strong>Conversation‑End Experiment Mode</strong></li>
-    <li><strong>Nova Mode:</strong> always on</li>
-  </ul>
-</section>
-
-<section class="upgrades" id="upgrades">
-  <h2>Future Upgrades</h2>
-  <ul>
-    <li>Voice Nova</li>
-    <li>Film‑analysis Nova</li>
-    <li>Habit‑tracking systems</li>
-    <li>Business dashboards</li>
-    <li>Training analytics</li>
-  </ul>
-</section>
-
-<section class="chat-section" id="chat">
-  <h2>Chat with Nova</h2>
-  <div class="chat-box" id="chatBox">
-    <!-- Messages will appear here -->
-  </div>
-  <div class="chat-input-container">
-    <input type="text" id="userInput" placeholder="Type your message…" />
-    <button onclick="sendMessage()">Send</button>
-  </div>
+<section class="section" id="journey">
+  <h2>The Journey</h2>
+  <p>This space is where I'll share training logs, mindset reflections and updates on my athletic career. My goal is to inspire you to attack your own goals 
+  with relentless energy and discipline.</p>
 </section>
 
 <footer id="contact">
-  <p>Contact us at <a href="mailto:info@novaai.com" style="color:#8ab4f8;">info@novaai.com</a></p>
-  <p>&copy; 2025 Nova. All rights reserved.</p>
+  <p>Contact: <a href="mailto:info@novabrand.com" style="color:#ff4500;">info@novabrand.com</a></p>
+  <p>&copy; 2025 Brick-Wall Energy. All rights reserved.</p>
 </footer>
-
-<script>
-  // Function to append a message to the chat box
-  function appendMessage(text, sender) {
-    const chatBox = document.getElementById('chatBox');
-    const messageDiv = document.createElement('div');
-    messageDiv.className = 'chat-message ' + sender;
-    messageDiv.textContent = text;
-    chatBox.appendChild(messageDiv);
-    chatBox.scrollTop = chatBox.scrollHeight;
-  }
-
-  // Function to send a message
-  async function sendMessage() {
-    const input = document.getElementById('userInput');
-    const message = input.value.trim();
-    if (!message) return;
-    appendMessage('You: ' + message, 'user');
-    input.value = '';
-    try {
-      // POST the message to your backend endpoint
-      const response = await fetch('/.netlify/functions/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ message })
-      });
-      if (response.ok) {
-        const data = await response.json();
-        appendMessage('Nova: ' + data.reply, 'bot');
-      } else {
-        appendMessage('Nova: Sorry, there was an error. Please try again later.', 'bot');
-      }
-    } catch (err) {
-      appendMessage('Nova: Unable to reach the server.', 'bot');
-    }
-  }
-</script>
 
 </body>
 </html>
